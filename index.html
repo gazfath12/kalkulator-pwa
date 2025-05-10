@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator PWA</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Apple touch icon (untuk perangkat iOS) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+
+  <!-- Icon favicon untuk browser -->
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192x192.png">
+  
+  <style>
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <!-- Label tersembunyi untuk aksesibilitas -->
+    <label for="display" class="visually-hidden">Display Kalkulator</label>
+
+    <!-- Display input -->
+    <input
+      type="text"
+      id="display"
+      disabled
+      title="Display kalkulator"
+      aria-label="Display kalkulator"
+    >
+
+    <div class="buttons">
+      <!-- Baris 1 -->
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="appendToDisplay('/')">/</button>
+
+      <!-- Baris 2 -->
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button onclick="appendToDisplay('*')">*</button>
+
+      <!-- Baris 3 -->
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="appendToDisplay('-')">-</button>
+
+      <!-- Baris 4 -->
+      <button onclick="appendToDisplay('0')">0</button>
+      <button onclick="appendToDisplay('.')">.</button>
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="appendToDisplay('+')">+</button>
+
+      <!-- Tombol sama dengan -->
+      <button onclick="calculate()" class="equals">=</button>
+    </div>
+  </div>
+
+  <!-- Script JavaScript -->
+  <script src="script.js"></script>
+
+  <!-- Registrasi Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(registration => {
+            console.log('Service Worker registered');
+          })
+          .catch(error => {
+            console.error('Service Worker registration failed:', error);
+          });
+      });
+    }
+  </script>
+</body>
+</html>

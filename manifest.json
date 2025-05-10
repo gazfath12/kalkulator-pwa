@@ -1,0 +1,15 @@
+{
+    "name": "Kalkulator PWA", 
+    "short_name": "Kalkulator", 
+    "start_url": "/", 
+    "display": "standalone", 
+    "background_color": "#333", 
+    "theme_color": "#ff9500", 
+    "icons": [
+      {
+        "src": "icon-192x192png", 
+        "sizes": "192x192", 
+        "type": "image/png" 
+      }
+    ]
+  }

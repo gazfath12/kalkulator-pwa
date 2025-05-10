@@ -1,0 +1,58 @@
+/* Reset styling dasar */
+body {
+    font-family: Arial, sans-serif; /* Font default */
+    display: flex;
+    justify-content: center; /* Pusatkan horizontal */
+    align-items: center; /* Pusatkan vertikal */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Hilangkan margin default */
+    background: #f0f0f0; /* Warna background */
+  }
+  
+  /* Style container kalkulator */
+  .calculator {
+    background: #333; /* Warna dark mode */
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 20px; /* Jarak dalam */
+    width: 250px; /* Lebar fixed */
+  }
+  
+  /* Style display kalkulator */
+  #display {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    font-size: 24px; /* Ukuran font besar */
+    text-align: right; /* Text rata kanan */
+    padding: 5px;
+    box-sizing: border-box; /* Hitung padding dalam width */
+  }
+  
+  /* Style grid tombol */
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom sama lebar */
+    gap: 10px; /* Jarak antar tombol */
+  }
+  
+  /* Style dasar tombol */
+  button {
+    height: 50px;
+    font-size: 18px;
+    border: none; /* Hilangkan border default */
+    border-radius: 5px; /* Sudut melengkung */
+    cursor: pointer; /* Ubah kursor saat hover */
+  }
+  
+  /* Efek saat tombol ditekan */
+  button:active {
+    transform: scale(0.95); /* Sedikit mengecil */
+  }
+  
+  /* Style khusus tombol '=' */
+  .equals {
+    grid-column: span 4; /* Lebar 4 kolom */
+    background: #ff9500; /* Warna oranye */
+    color: white; /* Text putih */
+  }
+  
