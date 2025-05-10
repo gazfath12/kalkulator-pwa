@@ -7,7 +7,9 @@ const ASSETS = [
   '/index.html',
   '/style.css',
   '/script.js',
-  '/icon.png'
+  '/manifest.json',
+  '/icons/icon-192x192.png',
+  '/icons/icon-512x512.png'
 ];
 
 // Event saat Service Worker di-install
