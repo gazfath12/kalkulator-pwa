@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="theme-color" content="#4CAF50">
@@ -15,64 +16,47 @@
 
   <!-- Icon favicon untuk browser -->
   <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192x192.png">
-  
-  <style>
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-  </style>
+
 </head>
+
 <body>
-  
+
   <div class="calculator">
     <!-- Label tersembunyi untuk aksesibilitas -->
-    <label for="display" class="visually-hidden">Display Kalkulator</label>
+    <label for="display" class="visually-hidden">Display Kalkulator canggih</label>
 
     <!-- Display input -->
-    <input
-      type="text"
-      id="display"
-      disabled
-      title="Display kalkulator"
-      aria-label="Display kalkulator"
-    >
+<!-- Display input -->
+<input type="text" id="display" disabled title="Display kalkulator" aria-label="Display kalkulator">
 
-    <div class="buttons">
-      <!-- Baris 1 -->
-      <button onclick="appendToDisplay('7')">7</button>
-      <button onclick="appendToDisplay('8')">8</button>
-      <button onclick="appendToDisplay('9')">9</button>
-      <button onclick="appendToDisplay('/')">/</button>
+<!-- Baris 1 -->
+<button onclick="appendToDisplay('7')">7</button>
+<button onclick="appendToDisplay('8')">8</button>
+<button onclick="appendToDisplay('9')">9</button>
+<button onclick="appendToDisplay('/')">&divide;</button>
 
-      <!-- Baris 2 -->
-      <button onclick="appendToDisplay('4')">4</button>
-      <button onclick="appendToDisplay('5')">5</button>
-      <button onclick="appendToDisplay('6')">6</button>
-      <button onclick="appendToDisplay('*')">*</button>
+<!-- Baris 2 -->
+<button onclick="appendToDisplay('4')">4</button>
+<button onclick="appendToDisplay('5')">5</button>
+<button onclick="appendToDisplay('6')">6</button>
+<button onclick="appendToDisplay('*')">&times;</button>
 
-      <!-- Baris 3 -->
-      <button onclick="appendToDisplay('1')">1</button>
-      <button onclick="appendToDisplay('2')">2</button>
-      <button onclick="appendToDisplay('3')">3</button>
-      <button onclick="appendToDisplay('-')">-</button>
+<!-- Baris 3 -->
+<button onclick="appendToDisplay('1')">1</button>
+<button onclick="appendToDisplay('2')">2</button>
+<button onclick="appendToDisplay('3')">3</button>
+<button onclick="appendToDisplay('-')">−</button>
 
-      <!-- Baris 4 -->
-      <button onclick="appendToDisplay('0')">0</button>
-      <button onclick="appendToDisplay('.')">.</button>
-      <button onclick="clearDisplay()">C</button>
-      <button onclick="appendToDisplay('+')">+</button>
+<!-- Baris 4 -->
+<button onclick="appendToDisplay('0')">0</button>
+<button onclick="appendToDisplay('.')">.</button>
+<button onclick="clearDisplay()">C</button>
+<button onclick="appendToDisplay('+')">+</button>
 
-      <!-- Tombol sama dengan -->
-      <button onclick="calculate()" class="equals">=</button>
-    </div>
+<!-- Tombol sama dengan -->
+<button onclick="calculate()" class="equals">=</button>
+
+  </div>
   </div>
 
   <!-- Script JavaScript -->
@@ -93,4 +77,5 @@
     }
   </script>
 </body>
+
 </html>
